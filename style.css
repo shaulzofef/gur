@@ -79,6 +79,7 @@ html {
  */
 body {
 	margin: 0;
+	padding: 2rem;
 }
 
 /**
@@ -403,11 +404,14 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: helvetica, sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
 
+h1 {
+	font-size: 1.2rem;
+}
 h1,
 h2,
 h3,
@@ -467,6 +471,12 @@ ins {
 
 big {
 	font-size: 125%;
+}
+
+.site-title {
+	font-size: 1.2rem;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 /* Elements
@@ -533,19 +543,20 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #222;
 }
 
 a:visited {
-	color: #800080;
+	color: #222;
 }
 
-a:hover,
-a:focus,
-a:active {
-	color: #191970;
+a:hover
+ {
+	color: orange;
 }
-
+.current_page_item > a {
+	color: #aaa;	
+}
 a:focus {
 	outline: thin dotted;
 }
@@ -660,16 +671,11 @@ textarea {
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
+	margin-left: 1rem;
 }
 
 .main-navigation ul ul ul {
-	left: -999em;
+	left: auto;
 	top: 0;
 }
 
@@ -694,7 +700,6 @@ textarea {
 
 .main-navigation a {
 	display: block;
-	text-decoration: none;
 }
 
 /* Small menu. */
@@ -703,15 +708,13 @@ textarea {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
 
-	.menu-toggle {
-		display: none;
-	}
+.menu-toggle {
+	display: none;
+}
 
-	.main-navigation ul {
-		display: flex;
-	}
+.main-navigation ul {
+	display: block;
 }
 
 .site-main .comment-navigation,
@@ -725,7 +728,7 @@ textarea {
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
-	display: flex;
+	display: block;
 }
 
 .comment-navigation .nav-previous,
