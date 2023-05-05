@@ -664,23 +664,22 @@ textarea {
 }
 
 .main-navigation ul {
-	display: none;
+	display: block;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
-
+.main-navigation ul li {
+	display: block;	
+}
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
+	display: block;
+	left: auto;
 	z-index: 99999;
 }
 
 .main-navigation ul ul ul {
-	left: -999em;
+	left: auto;
 	top: 0;
 }
 
@@ -705,15 +704,24 @@ textarea {
 
 .main-navigation a {
 	display: block;
-	text-decoration: none;
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: none;
+	display: block;
 }
 
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}
 
 .site-main .comment-navigation,
 .site-main
