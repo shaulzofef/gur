@@ -549,7 +549,6 @@ a:visited {
 	color: #222;
 }
 
-a:hover,
 a:focus,
 a:active {
 	color: orange;
