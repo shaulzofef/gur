@@ -563,7 +563,7 @@ a:active {
 	outline: 0;
 }
 .current_page_item > a {
-	color: #aaa;
+	color: orange;
 }
 /* Forms
 --------------------------------------------- */
