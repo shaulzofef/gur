@@ -662,7 +662,6 @@ textarea {
 	display: block;
 	width: 100%;
 }
-
 .main-navigation ul {
 	display: block;
 	list-style: none;
@@ -708,7 +707,9 @@ textarea {
 }
 
 /* Small menu. */
-.menu-toggle,
+.menu-toggle {
+	display: none;
+}
 .main-navigation.toggled ul {
 	display: block;
 }
