@@ -719,7 +719,7 @@ textarea {
 	}
 
 	.main-navigation ul {
-		display: flex;
+		display: block;
 	}
 }
 
@@ -734,7 +734,7 @@ textarea {
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
-	display: flex;
+	display: block;
 }
 
 .comment-navigation .nav-previous,
