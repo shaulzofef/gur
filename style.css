@@ -69,8 +69,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
-	max-width: 40rem;
-	margin: 0 auto;
 }
 
 /* Sections
@@ -81,8 +79,6 @@ html {
  */
 body {
 	margin: 0;
-	padding: 2rem;
-	max-width: 100%;
 }
 
 /**
@@ -90,7 +86,6 @@ body {
  */
 main {
 	display: block;
-	margin-top: 2rem;
 }
 
 /**
@@ -408,14 +403,11 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: helvetica, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
 
-h1 {
-	font-size: 1.2rem;
-}
 h1,
 h2,
 h3,
@@ -475,12 +467,6 @@ ins {
 
 big {
 	font-size: 125%;
-}
-
-.site-title {
-	font-size: 1.2rem;
-	text-decoration: none;
-	font-weight: bold;
 }
 
 /* Elements
@@ -547,20 +533,19 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #222;
+	color: #4169e1;
 }
 
 a:visited {
-	color: #222;
+	color: #800080;
 }
 
-a:hover
- {
-	color: orange;
+a:hover,
+a:focus,
+a:active {
+	color: #191970;
 }
-.current_page_item > a {
-	color: #aaa;	
-}
+
 a:focus {
 	outline: thin dotted;
 }
@@ -675,11 +660,16 @@ textarea {
 }
 
 .main-navigation ul ul {
-	margin-left: 1rem;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
 }
 
 .main-navigation ul ul ul {
-	left: auto;
+	left: -999em;
 	top: 0;
 }
 
@@ -704,6 +694,7 @@ textarea {
 
 .main-navigation a {
 	display: block;
+	text-decoration: none;
 }
 
 /* Small menu. */
@@ -712,13 +703,15 @@ textarea {
 	display: block;
 }
 
+@media screen and (min-width: 37.5em) {
 
-.menu-toggle {
-	display: none;
-}
+	.menu-toggle {
+		display: none;
+	}
 
-.main-navigation ul {
-	display: block;
+	.main-navigation ul {
+		display: flex;
+	}
 }
 
 .site-main .comment-navigation,
@@ -732,7 +725,7 @@ textarea {
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
-	display: block;
+	display: flex;
 }
 
 .comment-navigation .nav-previous,

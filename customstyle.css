@@ -1,7 +1,14 @@
+html {
+	max-width: 40rem;
+	margin: 0 auto;
+}
 body {
 	padding: 2 rem;
+	max-width: 100%;
 }
-
+main {
+	margin-top: 2rem;
+}
 optgroup,
 textarea {
 	font-family: helvetica, sans-serif;
