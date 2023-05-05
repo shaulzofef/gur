@@ -69,6 +69,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
+	max-width: 40rem;
+	margin: 0 auto;
 }
 
 /* Sections
@@ -79,6 +81,8 @@ html {
  */
 body {
 	margin: 0;
+	max-width: 100%;
+	padding: 2rem;
 }
 
 /**
@@ -86,6 +90,7 @@ body {
  */
 main {
 	display: block;
+	margin-top: 2rem;
 }
 
 /**
@@ -207,7 +212,7 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit;
+	font-family: helvetica, sans-serif;
 	font-size: 100%;
 	line-height: 1.15;
 	margin: 0;
@@ -416,7 +421,11 @@ h5,
 h6 {
 	clear: both;
 }
-
+h1, .site-title {
+	font-size: 1.3rem;
+}
+	
+}
 p {
 	margin-bottom: 1.5em;
 }
@@ -533,17 +542,17 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #222;
 }
 
 a:visited {
-	color: #800080;
+	color: #222;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: orange;
 }
 
 a:focus {
@@ -554,7 +563,9 @@ a:hover,
 a:active {
 	outline: 0;
 }
-
+.current_page_item > a {
+	color: #aaa;
+}
 /* Forms
 --------------------------------------------- */
 button,
